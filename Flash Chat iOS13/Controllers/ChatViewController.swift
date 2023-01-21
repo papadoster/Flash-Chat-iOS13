@@ -67,15 +67,11 @@ class ChatViewController: UIViewController {
     
     func createTitle() {
         
-//        navigationController?.isNavigationBarHidden = false
         navigationController?.navigationBar.standardAppearance = UINavigationBarAppearance()
         navigationController?.navigationBar.standardAppearance.backgroundColor = UIColor(named: K.BrandColors.blue)
         title = K.appName
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.white]
+        navigationController?.navigationBar.standardAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         
-//        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.init(named: K.BrandColors.lightPurple)]
-//        navigationController?.navigationBar.titleTextAttributes = textAttributes as [NSAttributedString.Key : Any]
         navigationItem.hidesBackButton = true
         
     }
